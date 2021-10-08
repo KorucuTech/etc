@@ -21,3 +21,6 @@ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-c
 sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose version
+
+# To start a docker swarm and make this machine the manager
+#docker swarm init --advertise-addr x.x.x.x
