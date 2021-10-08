@@ -1,0 +1,25 @@
+version: '3'
+  
+services:
+    keycloak:
+    image: jboss/keycloak:15.0.2
+    container_name: keycloak
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8080:8080
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: x.x.x.x
+      DB_DATABASE: keycloak
+      DB_USER: postgres
+      DB_SCHEMA: public
+      DB_PASSWORD: postgres
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      PROXY_ADDRESS_FORWARDING: "true"
+      KEYCLOAK_DEFAULT_THEME: keycloak
+      KEYCLOAK_WELCOME_THEME: keycloak
+    volumes:
+      - ./keycloak/themes/custom/welcome:/opt/jboss/keycloak/themes/custom/welcome
+      - ./keycloak/themes/custom/login:/opt/jboss/keycloak/themes/custom/login
