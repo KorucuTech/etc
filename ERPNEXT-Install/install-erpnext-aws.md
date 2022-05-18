@@ -5,12 +5,12 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-# Som of these are already installed so you may skip them if already installed
+# Some of these are already installed so you may skip them if already installed
 sudo apt-get install python3
 sudo apt-get install git
 sudo apt-get install curl
 sudo apt-get install python-setuptools
-sudo apt-get install pip
+sudo apt-get install python3-pip
 sudo apt-get install software-properties-common
 
 # Install and configure MariaDB
@@ -37,11 +37,12 @@ sudo mysql_secure_installation
 # Install Redis Server
 sudo apt-get install redis-server
 
-# Install Node and Yarn
+# Install Node v16.15.0 or later
 sudo apt-get install npm
-npm install -g n
+sudo npm install -g n
 sudo n stable
 sudo npm install -g yarn
+node --verison
 
 # Just reboot for a clean system
 sudo reboot
@@ -50,7 +51,8 @@ sudo reboot
 sudo pip install frappe-bench
 
 # You can change the verison that is available to you at the time of install
-bench init frappe-bench --frappe-branch v13.29.0
+# this will create a bench instance in frappe-bench folder
+bench init frappe-bench --frappe-branch v13.29.1
 cd frappe-bench
 bench get-app erpnext --branch v13.29.1
 
