@@ -49,7 +49,7 @@ sudo reboot
 #### Install frappe bench
 sudo pip install frappe-bench  
 
-#### You can change the verison that is available to you at the time of install this will create a bench instance in frappe-bench folder
+#### You can change the verison that is available to you at the time of install this will create a bench instance in frappe-bench folder in your home folder
 bench init frappe-bench --frappe-branch v13.29.1  
 cd frappe-bench  
 bench get-app erpnext --branch v13.29.1  
@@ -60,7 +60,7 @@ bench --site mysite.local install-app erpnext
 #### Ready to start ERPNEXT in development mode
 bench start  
 
-# Enjoy!
+#### Enjoy!
 
 
 
