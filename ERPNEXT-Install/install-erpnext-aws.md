@@ -1,11 +1,10 @@
-#
 # To Install ERPNEXT on AWS EC2 instance of Ubuntu 22.04
-# While any size VM may work I found a "t2.medium" to work best for me
+## While any size VM may work I found a "t2.medium" to work best for me
 
 sudo apt-get update
 sudo apt-get upgrade
 
-# Some of these are already installed so you may skip them if already installed
+## Some of these are already installed so you may skip them if already installed
 sudo apt-get install python3
 sudo apt-get install git
 sudo apt-get install curl
@@ -13,7 +12,7 @@ sudo apt-get install python-setuptools
 sudo apt-get install python3-pip
 sudo apt-get install software-properties-common
 
-# Install and configure MariaDB
+## Install and configure MariaDB
 sudo apt-get update
 sudo apt-get install mariadb-server-10.6
 sudo apt-get install libmysqlclient-dev
