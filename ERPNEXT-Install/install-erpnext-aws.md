@@ -55,7 +55,8 @@ cd frappe-bench
 bench get-app erpnext --branch v13.29.1  
 
 bench new-site mysite.local  
-bench --site mysite.local install-app erpnext  
+bench --site mysite.local install-app erpnext 
+bench use mysite.local 
 
 #### Ready to start ERPNEXT in development mode
 bench start  
