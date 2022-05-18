@@ -8,9 +8,10 @@ sudo apt-get upgrade
 sudo apt-get install python3  
 sudo apt-get install git  
 sudo apt-get install curl  
-sudo apt-get install python-setuptools  
+sudo apt-get install python3-setuptools  
 sudo apt-get install python3-pip  
 sudo apt-get install software-properties-common  
+sudo apt-get install wkhtmltopdf  
 
 #### Install and configure MariaDB
 sudo apt-get update  
@@ -39,9 +40,9 @@ sudo apt-get install redis-server
 #### Install Node v16.15.0 or later  
 sudo apt-get install npm  
 sudo npm install -g n  
-sudo n stable  
-sudo npm install -g yarn  
-node --verison  
+sudo n latest  
+sudo npm install -g yarn    
+node --version  
 
 #### Just reboot for a clean system  
 sudo reboot  
@@ -49,7 +50,7 @@ sudo reboot
 #### Install frappe bench
 sudo pip install frappe-bench  
 
-#### You can change the verison that is available to you at the time of install this will create a bench instance in frappe-bench folder in your home folder
+#### You can change the verison that is available to you at the time of install this will create a bench instance in frappe-bench folder in your home folder (This takes a while to finish)
 bench init frappe-bench --frappe-branch v13.29.1  
 cd frappe-bench  
 bench get-app erpnext --branch v13.29.1  
@@ -60,6 +61,8 @@ bench use mysite.local
 
 #### Ready to start ERPNEXT in development mode
 bench start  
+
+#### Make sure the port for web server (usually 8000) is open on your aws firewall
 
 #### Enjoy!
 
