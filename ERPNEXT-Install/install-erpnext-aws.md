@@ -37,10 +37,10 @@ sudo mysql_secure_installation
 #### Install Redis Server  
 sudo apt-get install redis-server  
 
-#### Install Node v16.15.0 or later  
+#### Install Node v14 (any other version seem to cause an error on bench init) 
 sudo apt-get install npm  
 sudo npm install -g n  
-sudo n latest  
+sudo n 14  
 sudo npm install -g yarn    
 node --version  
 
